@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <errno.h>
 #include <pthread.h>
+#include <semaphore.h>
+sem_t sem;
 void * thread_func(void *arg)
 { int i;
 int loc_id = * (int *) arg;
